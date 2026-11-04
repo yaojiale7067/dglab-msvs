@@ -5,11 +5,7 @@ using Microsoft.VisualStudio.Utilities;
 
 namespace DGLab.VS2026
 {
-    /// <summary>
-    /// 保证编辑器内的 Ctrl+U 能触发“开始连接”。
-    /// Visual Studio 默认把 Ctrl+U 绑定到“转换为小写”，仅靠 VSCT 快捷键可能被内置命令抢占，
-    /// 因此用键盘处理器在编辑器预览阶段拦截（与原 VSCode 插件 editorTextFocus 下的 Ctrl+U 行为一致）。
-    /// </summary>
+
     [Export(typeof(IKeyProcessorProvider))]
     [ContentType("text")]
     [TextViewRole(PredefinedTextViewRoles.Editable)]
