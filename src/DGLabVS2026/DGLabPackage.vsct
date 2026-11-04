@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+
+  <Commands package="guidDGLabPackage">
+    <Menus>
+      <Menu guid="guidDGLabCmdSet" id="DGLabMenu" priority="0x700" type="Menu">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_MM_TOOLSADDINS" />
+        <Strings>
+          <ButtonText>DGLab 郊狼</ButtonText>
+          <CommandName>DGLab</CommandName>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Groups>
+      <Group guid="guidDGLabCmdSet" id="DGLabGroup" priority="0x0600">
+        <Parent guid="guidDGLabCmdSet" id="DGLabMenu" />
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidDGLabCmdSet" id="cmdidConnect" priority="0x0100" type="Button">
+        <Parent guid="guidDGLabCmdSet" id="DGLabGroup" />
+        <Strings>
+          <ButtonText>开始连接</ButtonText>
+          <CommandName>DGLab.Connect</CommandName>
+        </Strings>
+      </Button>
+      <Button guid="guidDGLabCmdSet" id="cmdidRefresh" priority="0x0200" type="Button">
+        <Parent guid="guidDGLabCmdSet" id="DGLabGroup" />
+        <Strings>
+          <ButtonText>刷新配置</ButtonText>
+          <CommandName>DGLab.Refresh</CommandName>
+        </Strings>
+      </Button>
+      <Button guid="guidDGLabCmdSet" id="cmdidSetPulseName" priority="0x0300" type="Button">
+        <Parent guid="guidDGLabCmdSet" id="DGLabGroup" />
+        <Strings>
+          <ButtonText>设置波形名称</ButtonText>
+          <CommandName>DGLab.SetPulseName</CommandName>
+        </Strings>
+      </Button>
+      <Button guid="guidDGLabCmdSet" id="cmdidShowQr" priority="0x0400" type="Button">
+        <Parent guid="guidDGLabCmdSet" id="DGLabGroup" />
+        <Strings>
+          <ButtonText>显示当前二维码</ButtonText>
+          <CommandName>DGLab.ShowQr</CommandName>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <KeyBindings>
+    <!-- 与 VSCode 原插件保持一致：编辑器内 Ctrl+U 开始连接 -->
+    <KeyBinding guid="guidDGLabCmdSet" id="cmdidConnect" editor="guidTextEditor" key1="U" mod1="Control" />
+  </KeyBindings>
+
+  <Symbols>
+    <GuidSymbol name="guidDGLabPackage" value="{7f3c1d2e-9a4b-4c5d-8e6f-0a1b2c3d4e5f}" />
+    <GuidSymbol name="guidDGLabCmdSet" value="{c4a8e2b1-5d3f-4a7c-9b6e-1f2d3c4b5a69}">
+      <IDSymbol name="DGLabMenu" value="0x1000" />
+      <IDSymbol name="DGLabGroup" value="0x1100" />
+      <IDSymbol name="cmdidConnect" value="0x0100" />
+      <IDSymbol name="cmdidRefresh" value="0x0101" />
+      <IDSymbol name="cmdidSetPulseName" value="0x0102" />
+      <IDSymbol name="cmdidShowQr" value="0x0103" />
+    </GuidSymbol>
+    <GuidSymbol name="guidTextEditor" value="{8B382828-6202-11D1-8870-0000F87579D2}" />
+  </Symbols>
+</CommandTable>

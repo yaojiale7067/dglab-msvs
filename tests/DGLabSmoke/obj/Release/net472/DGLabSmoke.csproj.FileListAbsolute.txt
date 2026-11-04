@@ -1,0 +1,12 @@
+D:\dglab_msvc\tests\DGLabSmoke\bin\Release\net472\DGLabSmoke.exe.config
+D:\dglab_msvc\tests\DGLabSmoke\bin\Release\net472\DGLabSmoke.exe
+D:\dglab_msvc\tests\DGLabSmoke\bin\Release\net472\DGLabSmoke.pdb
+D:\dglab_msvc\tests\DGLabSmoke\bin\Release\net472\QRCoder.dll
+D:\dglab_msvc\tests\DGLabSmoke\obj\Release\net472\DGLabSmoke.csproj.AssemblyReference.cache
+D:\dglab_msvc\tests\DGLabSmoke\obj\Release\net472\DGLabSmoke.GeneratedMSBuildEditorConfig.editorconfig
+D:\dglab_msvc\tests\DGLabSmoke\obj\Release\net472\DGLabSmoke.AssemblyInfoInputs.cache
+D:\dglab_msvc\tests\DGLabSmoke\obj\Release\net472\DGLabSmoke.AssemblyInfo.cs
+D:\dglab_msvc\tests\DGLabSmoke\obj\Release\net472\DGLabSmoke.csproj.CoreCompileInputs.cache
+D:\dglab_msvc\tests\DGLabSmoke\obj\Release\net472\DGLabSmoke.csproj.Up2Date
+D:\dglab_msvc\tests\DGLabSmoke\obj\Release\net472\DGLabSmoke.exe
+D:\dglab_msvc\tests\DGLabSmoke\obj\Release\net472\DGLabSmoke.pdb

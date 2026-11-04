@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>DGLab.Smoke</RootNamespace>
+    <AssemblyName>DGLabSmoke</AssemblyName>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\src\DGLabVS2026\Core\ChannelMode.cs" Link="Core\ChannelMode.cs" />
+    <Compile Include="..\..\src\DGLabVS2026\Core\DGLabClient.cs" Link="Core\DGLabClient.cs" />
+    <Compile Include="..\..\src\DGLabVS2026\Core\DGLabSettings.cs" Link="Core\DGLabSettings.cs" />
+    <Compile Include="..\..\src\DGLabVS2026\Core\Json.cs" Link="Core\Json.cs" />
+    <Compile Include="..\..\src\DGLabVS2026\Core\PulseLibrary.cs" Link="Core\PulseLibrary.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\src\DGLabVS2026\Resources\wave.json">
+      <LogicalName>DGLab.VS2026.wave.json</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="QRCoder">
+      <HintPath>..\..\lib\QRCoder.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+
+</Project>

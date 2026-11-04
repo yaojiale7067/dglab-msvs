@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\dglab_msvc\\src\\DGLabVS2026\\DGLabVS2026.csproj": {}
+  },
+  "projects": {
+    "D:\\dglab_msvc\\src\\DGLabVS2026\\DGLabVS2026.csproj": {
+      "version": "0.1.0",
+      "restore": {
+        "projectUniqueName": "D:\\dglab_msvc\\src\\DGLabVS2026\\DGLabVS2026.csproj",
+        "projectName": "DGLabVS2026",
+        "projectPath": "D:\\dglab_msvc\\src\\DGLabVS2026\\DGLabVS2026.csproj",
+        "packagesPath": "C:\\Users\\38716\\.nuget\\packages\\",
+        "outputPath": "D:\\dglab_msvc\\src\\DGLabVS2026\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\38716\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "framework": "net472",
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net472": {
+          "framework": "net472",
+          "targetAlias": "net472",
+          "dependencies": {
+            "Microsoft.VSSDK.BuildTools": {
+              "target": "Package",
+              "version": "[18.9.820, )"
+            },
+            "Microsoft.VisualStudio.SDK": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[17.14.40265, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
