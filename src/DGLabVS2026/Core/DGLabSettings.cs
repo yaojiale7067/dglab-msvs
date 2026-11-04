@@ -25,7 +25,11 @@ namespace DGLab.VS2026
             int onSaveDocument,
             int codingMaxFrequency,
             ChannelMode channelMode,
-            IEnumerable<string> blacklist)
+            IEnumerable<string> blacklist,
+            double editOutputDuration = 0.3,
+            double eventOutputDuration = 0.6,
+            double saveOutputDuration = 2.0,
+            double fireStrengthHoldDuration = 0.6)
         {
             Strength = Math.Max(0, strength);
             PulseName = string.IsNullOrWhiteSpace(pulseName) ? "快速按捏" : pulseName.Trim();
@@ -38,6 +42,10 @@ namespace DGLab.VS2026
             OnSaveDocument = Math.Max(0, onSaveDocument);
             CodingMaxFrequency = Math.Max(0, codingMaxFrequency);
             ChannelMode = channelMode;
+            EditOutputDuration = ClampDuration(editOutputDuration, 0.3);
+            EventOutputDuration = ClampDuration(eventOutputDuration, 0.6);
+            SaveOutputDuration = ClampDuration(saveOutputDuration, 2.0);
+            FireStrengthHoldDuration = ClampDuration(fireStrengthHoldDuration, 0.6);
             _blacklist = new HashSet<string>(
                 (blacklist ?? Enumerable.Empty<string>())
                     .Where(x => !string.IsNullOrWhiteSpace(x))
@@ -67,6 +75,18 @@ namespace DGLab.VS2026
         public int CodingMaxFrequency { get; }
 
         public ChannelMode ChannelMode { get; }
+
+        /// <summary>编辑代码时单次波形的持续时间（秒）。</summary>
+        public double EditOutputDuration { get; }
+
+        /// <summary>调试开始/结束、调试报错、断点变化时的波形持续时间（秒）。</summary>
+        public double EventOutputDuration { get; }
+
+        /// <summary>保存文件时的波形持续时间（秒）。</summary>
+        public double SaveOutputDuration { get; }
+
+        /// <summary>一键开火时临时强度保持多久后恢复（秒）。</summary>
+        public double FireStrengthHoldDuration { get; }
 
         public IReadOnlyCollection<string> Blacklist => _blacklist;
 
@@ -106,6 +126,16 @@ namespace DGLab.VS2026
             }
 
             return extension.Trim().TrimStart('.');
+        }
+
+        private static double ClampDuration(double value, double fallback)
+        {
+            if (double.IsNaN(value) || double.IsInfinity(value) || value <= 0)
+            {
+                return fallback;
+            }
+
+            return Math.Min(30.0, Math.Max(0.05, value));
         }
     }
 }

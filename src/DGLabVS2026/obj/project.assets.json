@@ -6173,7 +6173,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "0.1.0",
+    "version": "0.1.2",
     "restore": {
       "projectUniqueName": "D:\\dglab_msvc\\src\\DGLabVS2026\\DGLabVS2026.csproj",
       "projectName": "DGLabVS2026",

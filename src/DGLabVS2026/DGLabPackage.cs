@@ -23,7 +23,7 @@ namespace DGLab.VS2026
     ///  - 心跳、强度渐增、A/B/AB 通道、后缀名黑名单
     /// </summary>
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
-    [InstalledProductRegistration("DGLabVSCode", "郊狼联动的 Visual Studio 2026 插件", "0.1.0")]
+    [InstalledProductRegistration("DGLabVSCode", "郊狼联动的 Visual Studio 2026 插件", "0.1.2")]
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [ProvideOptionPage(typeof(DGLabOptionsPage), "DGLab", "郊狼插件配置", 0, 0, true)]
     [ProvideToolWindow(typeof(QrCodeToolWindow), Style = VsDockStyle.Float, Width = 460, Height = 720)]
@@ -361,7 +361,7 @@ namespace DGLab.VS2026
                 }
 
                 _changeCount++;
-                _ = client.SendWaveAsync("this", 0.3);
+                _ = client.SendWaveAsync("this", settings.EditOutputDuration);
             }
         }
 
@@ -399,7 +399,7 @@ namespace DGLab.VS2026
             }
 
             _log.Write($"保存文件: {path}");
-            _ = client.SendFireAsync(settings.OnSaveDocument, 2);
+            _ = client.SendFireAsync(settings.OnSaveDocument, settings.SaveOutputDuration, settings.FireStrengthHoldDuration);
         }
 
         #endregion
@@ -454,7 +454,7 @@ namespace DGLab.VS2026
             }
 
             _log.Write("断点发生变化");
-            _ = client.SendFireAsync(settings.OnBreakpointsChanged, 0.6);
+            _ = client.SendFireAsync(settings.OnBreakpointsChanged, settings.EventOutputDuration, settings.FireStrengthHoldDuration);
         }
 
         private void FireDebugEvent(int strength, string reason)
@@ -472,8 +472,8 @@ namespace DGLab.VS2026
                 return;
             }
 
-            _log.Write($"{reason}，发送一键开火，强度 {strength}");
-            _ = client.SendFireAsync(strength, 0.6);
+            _log.Write($"{reason}，发送一键开火，强度 {strength}，波形 {settings.EventOutputDuration:0.##} 秒");
+            _ = client.SendFireAsync(strength, settings.EventOutputDuration, settings.FireStrengthHoldDuration);
         }
 
         private bool IsActiveDocumentBlacklisted(DGLabSettings settings)

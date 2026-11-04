@@ -447,8 +447,8 @@ namespace DGLab.VS2026
             }
 
             _host.Log($"基础强度 +{addStrength}");
-            await SetStrengthAsync(1, 4, settings.Strength + addStrength).ConfigureAwait(false);
-            await SetStrengthAsync(2, 4, settings.Strength + addStrength).ConfigureAwait(false);
+            await SetStrengthAsync(1, 3, settings.Strength + addStrength).ConfigureAwait(false);
+            await SetStrengthAsync(2, 3, settings.Strength + addStrength).ConfigureAwait(false);
         }
 
         public async Task<bool> SetStrengthAsync(int channel, int type, int strength)
@@ -481,7 +481,21 @@ namespace DGLab.VS2026
 
         private object CreateStrengthMessage(int channel, int type, int strength, string clientId, string targetId)
         {
-            if (type >= 1 && type <= 3)
+            // 当前 V3 协议：
+            //   type 1/2 = 降低/提高一档，type 3 = 设置绝对强度，type 4 = 清理通道任务。
+            if (type == 1 || type == 2)
+            {
+                return new
+                {
+                    type,
+                    channel,
+                    clientId,
+                    targetId,
+                    message = "set channel"
+                };
+            }
+
+            if (type == 3)
             {
                 return new
                 {
@@ -494,17 +508,6 @@ namespace DGLab.VS2026
                 };
             }
 
-            if (type == 4)
-            {
-                return new
-                {
-                    type,
-                    clientId,
-                    targetId,
-                    message = $"strength-{channel}+2+{strength}"
-                };
-            }
-
             _host.Log("设置强度类型错误: " + type);
             return null;
         }
@@ -513,24 +516,25 @@ namespace DGLab.VS2026
         {
             foreach (var target in SnapshotTargets())
             {
-                await SendJsonAsync(new
+                foreach (var channel in new[] { 1, 2 })
                 {
-                    type = 4,
-                    clientId = target.Key,
-                    targetId = target.Value,
-                    message = "clear-1"
-                }).ConfigureAwait(false);
-
-                await SendJsonAsync(new
-                {
-                    type = 4,
-                    clientId = target.Key,
-                    targetId = target.Value,
-                    message = "clear-2"
-                }).ConfigureAwait(false);
+                    await SendJsonAsync(CreateClearMessage(channel, target.Key, target.Value)).ConfigureAwait(false);
+                }
             }
 
             _host.Log("已清除所有波形");
+        }
+
+        private object CreateClearMessage(int channel, string clientId, string targetId)
+        {
+            return new
+            {
+                type = 4,
+                channel,
+                clientId,
+                targetId,
+                message = "clear"
+            };
         }
 
         /// <summary>
@@ -538,6 +542,13 @@ namespace DGLab.VS2026
         /// </summary>
         public async Task SendWaveAsync(string wave, double time)
         {
+            if (double.IsNaN(time) || double.IsInfinity(time) || time <= 0)
+            {
+                time = 0.3;
+            }
+
+            time = Math.Min(30.0, time);
+
             string[] hexWave;
 
             if (string.Equals(wave, "this", StringComparison.Ordinal))
@@ -590,9 +601,9 @@ namespace DGLab.VS2026
         }
 
         /// <summary>
-        /// 一键开火：清除旧波形，临时提升强度并发送波形，600ms 后恢复。
+        /// 一键开火：清除旧波形，临时提升强度并发送波形，保持 holdTime 后恢复。
         /// </summary>
-        public async Task SendFireAsync(double strength, double time)
+        public async Task SendFireAsync(double strength, double time, double holdTime = 0.6)
         {
             // 串行化一键开火，避免多个事件同时开火时强度恢复顺序错乱。
             await _fireGate.WaitAsync().ConfigureAwait(false);
@@ -610,16 +621,19 @@ namespace DGLab.VS2026
                 var originalStrength = settings.Strength + addStrength;
                 var fireStrength = (int)Math.Round(strength + originalStrength);
 
-                await SetStrengthAsync(1, 4, fireStrength).ConfigureAwait(false);
-                await SetStrengthAsync(2, 4, fireStrength).ConfigureAwait(false);
+                await SetStrengthAsync(1, 3, fireStrength).ConfigureAwait(false);
+                await SetStrengthAsync(2, 3, fireStrength).ConfigureAwait(false);
                 await SendWaveAsync("this", time).ConfigureAwait(false);
 
-                await Task.Delay(600).ConfigureAwait(false);
+                var holdSeconds = double.IsNaN(holdTime) || double.IsInfinity(holdTime) || holdTime <= 0
+                    ? 0.6
+                    : Math.Min(30.0, holdTime);
+                await Task.Delay(TimeSpan.FromSeconds(holdSeconds)).ConfigureAwait(false);
 
-                await SetStrengthAsync(1, 4, originalStrength).ConfigureAwait(false);
-                await SetStrengthAsync(2, 4, originalStrength).ConfigureAwait(false);
+                await SetStrengthAsync(1, 3, originalStrength).ConfigureAwait(false);
+                await SetStrengthAsync(2, 3, originalStrength).ConfigureAwait(false);
 
-                _host.Log($"已发送一键开火，强度 {fireStrength}");
+                _host.Log($"已发送一键开火，强度 {fireStrength}，保持 {holdSeconds:0.##} 秒");
             }
             finally
             {
@@ -638,8 +652,8 @@ namespace DGLab.VS2026
             {
                 var settings = _host.Settings;
 
-                await SetStrengthAsync(1, 4, settings.Strength).ConfigureAwait(false);
-                await SetStrengthAsync(2, 4, settings.Strength).ConfigureAwait(false);
+                await SetStrengthAsync(1, 3, settings.Strength).ConfigureAwait(false);
+                await SetStrengthAsync(2, 3, settings.Strength).ConfigureAwait(false);
 
                 if (!string.IsNullOrEmpty(settings.PulseName))
                 {
@@ -715,8 +729,8 @@ namespace DGLab.VS2026
         private async Task ApplyBaseStrengthAsync()
         {
             var settings = _host.Settings;
-            await SetStrengthAsync(1, 4, settings.Strength).ConfigureAwait(false);
-            await SetStrengthAsync(2, 4, settings.Strength).ConfigureAwait(false);
+            await SetStrengthAsync(1, 3, settings.Strength).ConfigureAwait(false);
+            await SetStrengthAsync(2, 3, settings.Strength).ConfigureAwait(false);
         }
 
         private List<KeyValuePair<string, string>> SnapshotTargets()

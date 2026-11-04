@@ -8,9 +8,9 @@
     <UseWPF>true</UseWPF>
     <RootNamespace>DGLab.VS2026</RootNamespace>
     <AssemblyName>DGLabVS2026</AssemblyName>
-    <Version>0.1.0</Version>
-    <FileVersion>0.1.0.0</FileVersion>
-    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <Version>0.1.2</Version>
+    <FileVersion>0.1.2.0</FileVersion>
+    <AssemblyVersion>0.1.2.0</AssemblyVersion>
     <Company>DGLab</Company>
     <Product>DGLabVSCode for Visual Studio 2026</Product>
     <Copyright>GPL-3.0-or-later</Copyright>

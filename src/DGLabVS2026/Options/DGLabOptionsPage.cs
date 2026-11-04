@@ -69,6 +69,30 @@ namespace DGLab.VS2026
         [DefaultValue(12)]
         public int OnSaveDocument { get; set; } = 12;
 
+        [Category("输出时长")]
+        [DisplayName("编辑代码输出时长（秒）")]
+        [Description("每次编辑代码触发的波形持续时间，默认 0.3 秒。")]
+        [DefaultValue(0.3)]
+        public double EditOutputDuration { get; set; } = 0.3;
+
+        [Category("输出时长")]
+        [DisplayName("调试/断点输出时长（秒）")]
+        [Description("开始调试、结束调试、调试报错、断点变化时的波形持续时间，默认 0.6 秒。")]
+        [DefaultValue(0.6)]
+        public double EventOutputDuration { get; set; } = 0.6;
+
+        [Category("输出时长")]
+        [DisplayName("保存文件输出时长（秒）")]
+        [Description("保存文件时的波形持续时间，默认 2 秒。")]
+        [DefaultValue(2.0)]
+        public double SaveOutputDuration { get; set; } = 2.0;
+
+        [Category("输出时长")]
+        [DisplayName("开火强度保持时长（秒）")]
+        [Description("一键开火时临时提升的强度保持多久后恢复，默认 0.6 秒；与波形时长分开设置。")]
+        [DefaultValue(0.6)]
+        public double FireStrengthHoldDuration { get; set; } = 0.6;
+
         [Category("编辑")]
         [DisplayName("编辑事件上限（次/20秒）")]
         [Description("20 秒内编辑事件超过该数量时清空输出队列，防止手速过快被电。对应原 condingMaxfFrequency。")]
@@ -101,7 +125,11 @@ namespace DGLab.VS2026
                 OnSaveDocument,
                 CodingMaxFrequency,
                 MessageSendOption,
-                ParseBlacklist(Blacklist));
+                ParseBlacklist(Blacklist),
+                EditOutputDuration,
+                EventOutputDuration,
+                SaveOutputDuration,
+                FireStrengthHoldDuration);
         }
 
         public static IEnumerable<string> ParseBlacklist(string text)

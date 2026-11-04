@@ -1,6 +1,6 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Id="DGLabVS2026.7f3c1d2e-9a4b-4c5d-8e6f-0a1b2c3d4e5f" Version="0.1.0" Language="zh-CN" Publisher="DGLab" />
+    <Identity Id="DGLabVS2026.7f3c1d2e-9a4b-4c5d-8e6f-0a1b2c3d4e5f" Version="0.1.2" Language="zh-CN" Publisher="DGLab" />
     <DisplayName>DGLabVSCode for Visual Studio 2026</DisplayName>
     <Description xml:space="preserve">郊狼(DG-Lab)联动的 Visual Studio 2026 插件。连接郊狼 App，扫码绑定后，编辑代码、保存文件、开始/结束调试、调试报错、断点变化都会触发脉冲；支持波形选择、强度渐增、A/B 通道选择和后缀名黑名单。功能移植自 lxyddice/DGLabVSCode。</Description>
     <Icon>Assets\icon.png</Icon>

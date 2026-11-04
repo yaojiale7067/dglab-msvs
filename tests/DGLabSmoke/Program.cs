@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using DGLab.VS2026;
@@ -18,6 +19,7 @@ namespace DGLab.Smoke
 
             CheckPulseLibrary(failures);
             CheckSettings(failures);
+            CheckProtocolMessages(failures);
             CheckQrCode(failures);
             CheckWebSocket(failures);
 
@@ -81,6 +83,40 @@ namespace DGLab.Smoke
             Check(text == "AB一起输出", $"通道枚举显示文本错误: {text}", failures);
             var parsed = converter.ConvertFrom("仅A通道输出");
             Check(parsed is ChannelMode mode && mode == ChannelMode.AOnly, "通道枚举中文本反序列化错误", failures);
+        }
+
+        private static void CheckProtocolMessages(List<string> failures)
+        {
+            Console.WriteLine("== V3 协议消息 ==");
+            var settings = new DGLabSettings(
+                5, "快速按捏", 30, 20, 15, 15, 20, 10, 12, 20, ChannelMode.AB, null);
+            var host = new ConsoleHost(settings);
+
+            using (var client = new DGLabClient(host))
+            {
+                var strengthMethod = typeof(DGLabClient).GetMethod(
+                    "CreateStrengthMessage",
+                    BindingFlags.Instance | BindingFlags.NonPublic);
+                var strengthMessage = strengthMethod.Invoke(client, new object[] { 1, 3, 5, "cid", "tid" });
+                var strengthJson = Json.Serialize(strengthMessage);
+                Console.WriteLine("  设置强度: " + strengthJson);
+                Check(strengthJson.Contains("\"type\":3"), "设置强度必须使用 V3 type=3", failures);
+                Check(strengthJson.Contains("\"channel\":1"), "设置强度缺少 channel", failures);
+                Check(strengthJson.Contains("\"strength\":5"), "设置强度缺少 strength", failures);
+                Check(strengthJson.Contains("\"message\":\"set channel\""), "设置强度 message 错误", failures);
+                Check(strengthJson.Contains("\"clientId\":\"cid\""), "设置强度缺少 clientId", failures);
+                Check(strengthJson.Contains("\"targetId\":\"tid\""), "设置强度缺少 targetId", failures);
+
+                var clearMethod = typeof(DGLabClient).GetMethod(
+                    "CreateClearMessage",
+                    BindingFlags.Instance | BindingFlags.NonPublic);
+                var clearMessage = clearMethod.Invoke(client, new object[] { 2, "cid", "tid" });
+                var clearJson = Json.Serialize(clearMessage);
+                Console.WriteLine("  清理通道: " + clearJson);
+                Check(clearJson.Contains("\"type\":4"), "清理波形必须使用 type=4", failures);
+                Check(clearJson.Contains("\"channel\":2"), "清理波形缺少 channel", failures);
+                Check(clearJson.Contains("\"message\":\"clear\""), "清理波形 message 错误", failures);
+            }
         }
 
         private static void CheckQrCode(List<string> failures)
