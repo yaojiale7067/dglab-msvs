@@ -1,6 +1,5 @@
 ﻿# DGLabVSCode for Visual Studio 2026
 
-将 [lxyddice/DGLabVSCode](https://github.com/lxyddice/DGLabVSCode)（VSCode 郊狼联动插件）移植到 **Microsoft Visual Studio 2026** 的 VSIX 扩展。原插件的功能全部保留，并按照 Visual Studio 的可扩展模型重新实现。
 
 > 郊狼（DG-Lab）设备会产生电刺激。请从低强度开始，量力而行。本项目仅用于技术研究与个人娱乐，使用者需自行承担风险。
 
@@ -139,4 +138,4 @@ tests/DGLabSmoke/                   不依赖 VS 的协议/波形/二维码冒�
 
 ## 许可证
 
-原项目与本案均采用 **GPL-3.0**。原项目版权归 lxyddice 及贡献者所有；移植部分同样以 GPL-3.0 发布。详见 `LICENSE` / `LICENSE.txt`。第三方组件（QRCoder，MIT）的许可见 `THIRD-PARTY-NOTICES.txt`。
+原项目与本案均采用 **MIT**
