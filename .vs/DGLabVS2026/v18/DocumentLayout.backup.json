@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\dglab_msvc\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FF433137-A5AE-452B-874A-3B6DDAAB5ED2}|src\\DGLabVS2026\\DGLabVS2026.csproj|d:\\dglab_msvc\\src\\dglabvs2026\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{FF433137-A5AE-452B-874A-3B6DDAAB5ED2}|src\\DGLabVS2026\\DGLabVS2026.csproj|solutionrelative:src\\dglabvs2026\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF433137-A5AE-452B-874A-3B6DDAAB5ED2}|src\\DGLabVS2026\\DGLabVS2026.csproj|d:\\dglab_msvc\\src\\dglabvs2026\\license.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FF433137-A5AE-452B-874A-3B6DDAAB5ED2}|src\\DGLabVS2026\\DGLabVS2026.csproj|solutionrelative:src\\dglabvs2026\\license.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5DB9DF27-C00D-464F-BF48-A34EAE6236A4}|tests\\DGLabSmoke\\DGLabSmoke.csproj|d:\\dglab_msvc\\src\\dglabvs2026\\core\\pulselibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5DB9DF27-C00D-464F-BF48-A34EAE6236A4}|tests\\DGLabSmoke\\DGLabSmoke.csproj|solutionrelative:src\\dglabvs2026\\core\\pulselibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,10 +55,6 @@
       "RelativeMoniker": "D:0:0:{FF433137-A5AE-452B-874A-3B6DDAAB5ED2}|src\\DGLabVS2026\\DGLabVS2026.csproj|solutionrelative:src\\dglabvs2026\\source.extension.vsixmanifest||{2868F8ED-DE25-439D-9F59-AD52458E9328}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF433137-A5AE-452B-874A-3B6DDAAB5ED2}|src\\DGLabVS2026\\DGLabVS2026.csproj|d:\\dglab_msvc\\src\\dglabvs2026\\license.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FF433137-A5AE-452B-874A-3B6DDAAB5ED2}|src\\DGLabVS2026\\DGLabVS2026.csproj|solutionrelative:src\\dglabvs2026\\license.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FF433137-A5AE-452B-874A-3B6DDAAB5ED2}|src\\DGLabVS2026\\DGLabVS2026.csproj|d:\\dglab_msvc\\src\\dglabvs2026\\ui\\promptdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF433137-A5AE-452B-874A-3B6DDAAB5ED2}|src\\DGLabVS2026\\DGLabVS2026.csproj|solutionrelative:src\\dglabvs2026\\ui\\promptdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -78,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,33 +94,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DGLabKeyProcessor.cs",
-              "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\Events\\DGLabKeyProcessor.cs",
-              "RelativeDocumentMoniker": "src\\DGLabVS2026\\Events\\DGLabKeyProcessor.cs",
-              "ToolTip": "D:\\dglab_msvc\\src\\DGLabVS2026\\Events\\DGLabKeyProcessor.cs",
-              "RelativeToolTip": "src\\DGLabVS2026\\Events\\DGLabKeyProcessor.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAUwCgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T19:08:05.794Z",
+              "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\README.md",
+              "RelativeDocumentMoniker": "src\\DGLabVS2026\\README.md",
+              "ToolTip": "D:\\dglab_msvc\\src\\DGLabVS2026\\README.md",
+              "RelativeToolTip": "src\\DGLabVS2026\\README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-11-05T11:51:15.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "PulseLibrary.cs",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\Core\\PulseLibrary.cs",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\Core\\PulseLibrary.cs",
               "ToolTip": "D:\\dglab_msvc\\src\\DGLabVS2026\\Core\\PulseLibrary.cs",
               "RelativeToolTip": "src\\DGLabVS2026\\Core\\PulseLibrary.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAmwA0AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAmwA0AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-04T17:47:19.402Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Json.cs",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\Core\\Json.cs",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\Core\\Json.cs",
@@ -124,12 +128,11 @@
               "RelativeToolTip": "src\\DGLabVS2026\\Core\\Json.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAcwBQAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T17:47:10.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T17:47:10.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "DGLabSettings.cs",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\Core\\DGLabSettings.cs",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\Core\\DGLabSettings.cs",
@@ -137,12 +140,11 @@
               "RelativeToolTip": "src\\DGLabVS2026\\Core\\DGLabSettings.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T17:47:06.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T17:47:06.083Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "DGLabClient.cs",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\Core\\DGLabClient.cs",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\Core\\DGLabClient.cs",
@@ -150,12 +152,11 @@
               "RelativeToolTip": "src\\DGLabVS2026\\Core\\DGLabClient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T17:47:02.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T17:47:02.605Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "ChannelMode.cs",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\Core\\ChannelMode.cs",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\Core\\ChannelMode.cs",
@@ -163,12 +164,11 @@
               "RelativeToolTip": "src\\DGLabVS2026\\Core\\ChannelMode.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T17:47:00.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T17:47:00.338Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "DGLabLog.cs",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\Infrastructure\\DGLabLog.cs",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\Infrastructure\\DGLabLog.cs",
@@ -176,12 +176,11 @@
               "RelativeToolTip": "src\\DGLabVS2026\\Infrastructure\\DGLabLog.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T17:46:55.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T17:46:55.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "DGLabOptionsPage.cs",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\Options\\DGLabOptionsPage.cs",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\Options\\DGLabOptionsPage.cs",
@@ -189,12 +188,11 @@
               "RelativeToolTip": "src\\DGLabVS2026\\Options\\DGLabOptionsPage.cs",
               "ViewState": "AgIAAIgAAAAAAAAAAAAAwA8AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T17:46:37.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T17:46:37.066Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "wave.json",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\Resources\\wave.json",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\Resources\\wave.json",
@@ -202,12 +200,11 @@
               "RelativeToolTip": "src\\DGLabVS2026\\Resources\\wave.json",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAADQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-11-04T17:46:20.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T17:46:20.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "THIRD-PARTY-NOTICES.txt",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\THIRD-PARTY-NOTICES.txt",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\THIRD-PARTY-NOTICES.txt",
@@ -215,12 +212,11 @@
               "RelativeToolTip": "src\\DGLabVS2026\\THIRD-PARTY-NOTICES.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-11-04T17:46:18.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T17:46:18.354Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "PromptDialog.cs",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\UI\\PromptDialog.cs",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\UI\\PromptDialog.cs",
@@ -228,12 +224,11 @@
               "RelativeToolTip": "src\\DGLabVS2026\\UI\\PromptDialog.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAADwvyUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T17:41:15.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T17:41:15.35Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "QrCodeToolWindow.cs",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\ToolWindows\\QrCodeToolWindow.cs",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\ToolWindows\\QrCodeToolWindow.cs",
@@ -241,12 +236,36 @@
               "RelativeToolTip": "src\\DGLabVS2026\\ToolWindows\\QrCodeToolWindow.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T17:41:08.956Z",
+              "WhenOpened": "2026-11-04T17:41:08.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LICENSE.txt",
+              "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\LICENSE.txt",
+              "RelativeDocumentMoniker": "src\\DGLabVS2026\\LICENSE.txt",
+              "ToolTip": "D:\\dglab_msvc\\src\\DGLabVS2026\\LICENSE.txt",
+              "RelativeToolTip": "src\\DGLabVS2026\\LICENSE.txt",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-11-04T17:35:26.119Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 3,
+              "Title": "DGLabKeyProcessor.cs",
+              "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\Events\\DGLabKeyProcessor.cs",
+              "RelativeDocumentMoniker": "src\\DGLabVS2026\\Events\\DGLabKeyProcessor.cs",
+              "ToolTip": "D:\\dglab_msvc\\src\\DGLabVS2026\\Events\\DGLabKeyProcessor.cs",
+              "RelativeToolTip": "src\\DGLabVS2026\\Events\\DGLabKeyProcessor.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAUwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-04T19:08:05.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "DGLabPackage.cs",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\DGLabPackage.cs",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\DGLabPackage.cs",
@@ -254,12 +273,11 @@
               "RelativeToolTip": "src\\DGLabVS2026\\DGLabPackage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T17:35:35.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T17:35:35.277Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "DGLabPackage.vsct",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\DGLabPackage.vsct",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\DGLabPackage.vsct",
@@ -267,25 +285,11 @@
               "RelativeToolTip": "src\\DGLabVS2026\\DGLabPackage.vsct",
               "ViewState": "AgIAACsAAAAAAAAAAAAAADYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
-              "WhenOpened": "2026-11-04T17:35:31.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T17:35:31.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LICENSE.txt",
-              "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\LICENSE.txt",
-              "RelativeDocumentMoniker": "src\\DGLabVS2026\\LICENSE.txt",
-              "ToolTip": "D:\\dglab_msvc\\src\\DGLabVS2026\\LICENSE.txt",
-              "RelativeToolTip": "src\\DGLabVS2026\\LICENSE.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-11-04T17:35:26.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "source.extension.vsixmanifest [\u8BBE\u8BA1]",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\source.extension.vsixmanifest",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\source.extension.vsixmanifest",
@@ -297,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "GuidList.cs",
               "DocumentMoniker": "D:\\dglab_msvc\\src\\DGLabVS2026\\GuidList.cs",
               "RelativeDocumentMoniker": "src\\DGLabVS2026\\GuidList.cs",
@@ -305,8 +309,7 @@
               "RelativeToolTip": "src\\DGLabVS2026\\GuidList.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAUwA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T03:35:09.234Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T03:35:09.234Z"
             }
           ]
         }

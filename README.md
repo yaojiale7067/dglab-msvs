@@ -1,4 +1,4 @@
-﻿# DGLabVSCode for Visual Studio 2026
+﻿# DGLab for Visual Studio 2026
 
 
 > 郊狼（DG-Lab）设备会产生电刺激。请从低强度开始，量力而行。使用者需自行承担风险。
